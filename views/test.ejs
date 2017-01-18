@@ -279,7 +279,6 @@ e.$validators.maxlength=function(a,c){return 0>f||e.$isEmpty(c)||c.length<=f}}}}
 			$scope.changeintent = function() {
 				$scope.request = clone($scope.templates['intent']);
 				$scope.request.session.attributes = $scope.session;
-				$scope.request.request.intent.slots={};
 				$scope.request.request.intent.name = $scope.intent;
 			}
 			
@@ -349,8 +348,7 @@ e.$validators.maxlength=function(a,c){return 0>f||e.$isEmpty(c)||c.length<=f}}}}
 					"requestId": "amzn1.echo-api.request.6919844a-733e-4e89-893a-fdcb77e2ef0d",
 					"timestamp": "2015-05-13T12:34:56Z",
 					"intent": {
-					  "name": "",
-					  "slots": {}
+					  "name": ""
 					}
 				  }
 				}
@@ -418,14 +416,6 @@ e.$validators.maxlength=function(a,c){return 0>f||e.$isEmpty(c)||c.length<=f}}}}
 			<option value="<%=name%>"><%=name%>
 		<% } %>
 	</select>
-	</div>
-	<div id="slots" ng-show="getIntent().slots.length">
-		Slot Values: <br>
-		<div id="slotvalues" style="margin:5px;border:1px solid #ccc;display:inline-block;">
-			<div ng-repeat="slot in getIntent().slots">
-				{{slot.name}} : <input ng-change="request.request.intent.slots[slot.name].name=slot.name" ng-model="request.request.intent.slots[slot.name].value" style="width:100px;">
-			</div>
-		</div>
 	</div>
 </div>
 
