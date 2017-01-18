@@ -1,4 +1,4 @@
-# Alexa Airport Info Skill
+# Alexa Facts Skill
 
 This project demonstrates how to build an Alexa skill - no Amazon Echo required! It's a useful project to learn the basics of creating Alexa Skills.
 
