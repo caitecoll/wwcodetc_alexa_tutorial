@@ -1,6 +1,5 @@
 'use strict';
-module.change_code = 1;
-var _ = require('lodash');
+
 var Alexa = require('alexa-app');
 var app = new Alexa.app('diversityfacts');
 var FactHelper = require('./fact_helper');
@@ -19,6 +18,7 @@ app.intent('diversityfacts', {
   }
 );
 
-//hack to support custom utterances in utterance expansion string
+//modifcation to support custom utterances in utterance expansion string
 console.log(app.utterances().replace(/\{\-\|/g, '{'));
+
 module.exports = app;
